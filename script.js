@@ -11,9 +11,9 @@ let btn = document.querySelector('#submit')
             console.log(flag)
         })
         if(localStorage.getItem('key')!==null){
-            let btns = document.createElement('input')
+            let btns = document.createElement('button')
+            btns.innerText = 'Login as existing user'
             btns.setAttribute('type','submit')
-            btns.setAttribute('value','Login as existing user')
             btns.setAttribute('id','existing')
             form.append(btns)
 
