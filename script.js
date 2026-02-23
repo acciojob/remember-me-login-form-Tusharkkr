@@ -11,12 +11,8 @@ let btn = document.querySelector('#submit')
             console.log(flag)
         })
         if(localStorage.getItem('key')!==null){
-            let btns = document.createElement('button')
-            btns.innerText = 'Login as existing user'
-            btns.setAttribute('type','submit')
-            btns.setAttribute('id','existing')
-            form.append(btns)
-
+            let btns = document.querySelector('#existing')
+            btns.style.display=''
             btns.addEventListener('click',()=>{
                  let data = JSON.parse(localStorage.getItem('key'))
                  alert(`Logged in as ${data[0]}`)
